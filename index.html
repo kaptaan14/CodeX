@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Museum of CodeX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Exhibitions</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>Museum of CodeX</h1>
+    </header>
+
+    <main>
+      <section class="intro">
+        <img
+          src="https://images.adsttc.com/media/images/627e/dec9/3e4b/318f/a100/0024/medium_jpg/courtesy_of_studio_malka_architecture.jpg?1652481733"
+          alt="Museum Image"
+          class="intro-image"
+        />
+        <h2>Welcome to Our Museum</h2>
+        <p>Discover art, culture, and history from around the world.</p>
+      </section>
+
+      <section class="exhibitions">
+        <h3>Featured Exhibitions</h3>
+        <div class="exhibit">
+          <img
+            src="https://images.nationalgeographic.org/image/upload/v1638890289/EducationHub/photos/assyria.jpg"
+            alt="Ancient Civilization"
+            class="exhibit-image"
+          />
+          <h4>Ancient Civilizations</h4>
+          <p>Artifacts from Egypt, Greece, and Rome.</p>
+        </div>
+        <div class="exhibit">
+          <img
+            src="https://m.media-amazon.com/images/I/71PMTDwZKML._AC_UF1000,1000_QL80_.jpg"
+            alt="Modern Art"
+            class="exhibit-image"
+          />
+          <h4>Modern Art</h4>
+          <p>20th-century masterpieces from famous artists.</p>
+        </div>
+        <div class="exhibit">
+          <img
+            src="https://cdn.londonandpartners.com/asset/natural-history-museum_blue-whale-hintze-hall-photo-lucie-goodayle-image-courtesy-of-the-natural-history-museum_c4b9caf92a46e29762bcc2db0635f11b.jpg"
+            alt="Natural History"
+            class="exhibit-image"
+          />
+          <h4>Natural History</h4>
+          <p>Fossils, minerals, and rare specimens.</p>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@museumofcodex.com</p>
+        <p>Phone: +123-456-7890</p>
+      </section>
+
+      <button id="chatButton" onclick="toggleChat()">Chat with us</button>
+
+      <!-- Hidden iframe -->
+      <div id="chatContainer" class="hidden">
+        <iframe
+          width="350"
+          height="430"
+          allow="microphone;"
+          src="https://console.dialogflow.com/api-client/demo/embedded/60f7bd8d-985f-49c0-a664-fda9352ceb17"
+        ></iframe>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Museum of CodeX. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleChat() {
+        const chatContainer = document.getElementById("chatContainer");
+        if (chatContainer.classList.contains("hidden")) {
+          chatContainer.classList.remove("hidden");
+        } else {
+          chatContainer.classList.add("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>
